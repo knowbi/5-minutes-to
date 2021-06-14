@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pipeline>
   <info>
-    <name>hop\load-to-mongodb</name>
+    <name>hop\write-to-mongodb</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
     <description/>
     <extended_description/>
@@ -24,7 +24,7 @@
   <order>
     <hop>
       <from>get-data</from>
-      <to>load-data</to>
+      <to>write-data</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -138,7 +138,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>load-data</name>
+    <name>write-data</name>
     <type>MongoDbOutput</type>
     <description/>
     <distribute>Y</distribute>
