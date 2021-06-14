@@ -1,0 +1,39 @@
+{
+  "variables" : [ {
+    "name" : "OUTPUT_DIR",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "USERNAME_REF",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "PASSWORD_REF",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "DRIVER_REF",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "URL_REF",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "USERNAME_COMP",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "PASSWORD_COMP",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "DRIVER_COMP",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "URL_COMP",
+    "value" : "",
+    "description" : ""
+  } ]
+}

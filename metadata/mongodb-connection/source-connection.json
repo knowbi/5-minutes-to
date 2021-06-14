@@ -1,0 +1,20 @@
+{
+  "authenticationDatabaseName": "",
+  "usingKerberos": false,
+  "journaled": true,
+  "dbName": "how-to",
+  "authenticationUser": "",
+  "writeConcern": "",
+  "connectTimeoutMs": "",
+  "usingSslSocketFactory": false,
+  "authenticationPassword": "Encrypted ",
+  "usingAllReplicaSetMembers": false,
+  "replicationTimeoutMs": "",
+  "hostname": "localhost",
+  "port": "27017",
+  "socketTimeoutMs": "",
+  "name": "source-connection",
+  "readPreference": "PRIMARY",
+  "readPrefTagSets": "",
+  "authenticationMechanism": "SCRAM_SHA_1"
+}
