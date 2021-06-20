@@ -23,13 +23,13 @@
   </notepads>
   <order>
     <hop>
-      <from>get-data</from>
-      <to>load-data</to>
+      <from>read addresses from mongodb</from>
+      <to>write addresses to csv</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>get-data</name>
+    <name>read addresses from mongodb</name>
     <type>MongoDbInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -39,7 +39,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>source-connection</connection>
+    <connection>mongodb-connection</connection>
     <fields_name/>
     <collection>addresses-source</collection>
     <json_field_name>json</json_field_name>
@@ -91,7 +91,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>load-data</name>
+    <name>write addresses to csv</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -219,7 +219,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>384</xloc>
       <yloc>96</yloc>
     </GUI>
   </transform>

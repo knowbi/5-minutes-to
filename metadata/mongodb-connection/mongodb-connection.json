@@ -13,7 +13,7 @@
   "hostname": "localhost",
   "port": "27017",
   "socketTimeoutMs": "",
-  "name": "source-connection",
+  "name": "mongodb-connection",
   "readPreference": "PRIMARY",
   "readPrefTagSets": "",
   "authenticationMechanism": "SCRAM_SHA_1"

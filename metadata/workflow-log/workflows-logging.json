@@ -1,0 +1,10 @@
+{
+  "loggingParentsOnly": true,
+  "name": "workflows-logging",
+  "intervalInSeconds": "30",
+  "pipelineFilename": "${PROJECT_HOME}/etl\\workflows-logging.hpl",
+  "executingPeriodically": false,
+  "executingAtEnd": true,
+  "enabled": true,
+  "executingAtStart": true
+}

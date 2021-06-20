@@ -1,0 +1,54 @@
+﻿policy;expiry;location;state;region;insured-value;construction;business-type;earthquake;flood
+100242;02-Jan-21;Urban;NY;East;1.617.630;Frame;Retail;N;N
+100314;02-Jan-21;Urban;NY;East;8.678.500;Fire Resist;Apartment;Y;Y
+100359;02-Jan-21;Rural;WI;Midwest;2.052.660;Frame;Farming;N;N
+100315;03-Jan-21;Urban;NY;East;17.580.000;Frame;Apartment;Y;Y
+100385;03-Jan-21;Urban;NY;East;1.925.000;Masonry;Hospitality;N;N
+100388;04-Jan-21;Urban;IL;Midwest;12.934.500;Frame;Apartment;Y;Y
+100358;05-Jan-21;Urban;WI;Midwest;928.300;Masonry;Office Bldg;N;N
+100264;07-Jan-21;Rural;NY;East;2.219.900;Frame;Farming;N;N
+100265;07-Jan-21;Urban;NY;East;14.100.000;Frame;Apartment;Y;Y
+100357;08-Jan-21;Urban;NY;East;4.762.808;Masonry;Other;Y;Y
+100399;08-Jan-21;Urban;NY;East;13.925.190;Frame;Apartment;Y;Y
+100329;09-Jan-21;Urban;NY;East;6.350.000;Frame;Apartment;Y;Y
+100429;09-Jan-21;Urban;WI;Midwest;4.036.000;Masonry;Medical;Y;Y
+100441;10-Jan-21;Urban;NJ;East;472.800;Masonry;Retail;Y;Y
+100442;10-Jan-21;Urban;WI;Midwest;11.710.880;Masonry;Apartment;Y;Y
+100372;12-Jan-21;Urban;NY;East;1.370.300;Frame;Apartment;Y;Y
+100281;13-Jan-21;Rural;WI;Midwest;1.432.835;Frame;Farming;N;N
+100280;15-Jan-21;Urban;NY;East;82.000;Masonry;Organization;Y;Y
+100424;16-Jan-21;Urban;NY;East;192.000;Masonry;Retail;N;N
+100425;16-Jan-21;Urban;NY;East;4.950.000;Frame;Office Bldg;Y;Y
+100426;16-Jan-21;Urban;VT;Northeast;2.432.875;Fire Resist;Apartment;N;N
+100252;17-Jan-21;Urban;OH;Central;1.529.600;Masonry;Apartment;N;N
+100279;18-Jan-21;Urban;NY;East;7.677.000;Frame;Apartment;Y;Y
+100292;18-Jan-21;Urban;NY;East;13.750.000;Frame;Apartment;Y;Y
+100398;18-Jan-21;Rural;NY;East;2.529.400;Frame;Farming;N;N
+100382;19-Jan-21;Urban;NJ;East;2.328.650;Frame;Organization;N;N
+100461;20-Jan-21;Urban;WI;Midwest;4.380.200;Masonry;Office Bldg;Y;Y
+100263;22-Jan-21;Urban;NJ;East;2.815.000;Metal Clad;Apartment;Y;Y
+100453;22-Jan-21;Urban;NY;East;1.177.700;Frame;Hospitality;N;N
+100381;23-Jan-21;Urban;VT;Northeast;7.203.500;Frame;Office Bldg;Y;Y
+100275;25-Jan-21;Urban;WI;Midwest;53.410.614;Frame;Construction;Y;Y
+100277;25-Jan-21;Urban;NJ;East;3.189.300;Masonry;Service;Y;Y
+100312;25-Jan-21;Rural;IL;Midwest;3.145.700;Frame;Education;N;N
+100327;25-Jan-21;Urban;WI;Midwest;1.451.100;Frame;Recreation;N;N
+100326;26-Jan-21;Urban;OH;Central;1.787.900;Frame;Office Bldg;N;N
+100379;26-Jan-21;Urban;NY;East;18.777.355;Frame;Apartment;Y;Y
+100310;28-Jan-21;Urban;WI;Midwest;8.800.000;Fire Resist;Office Bldg;Y;Y
+100341;28-Jan-21;Urban;NY;East;1.123.000;Frame;Office Bldg;Y;Y
+100289;29-Jan-21;Rural;NY;East;2.145.420;Frame;Farming;N;N
+100290;29-Jan-21;Urban;NY;East;18.933.000;Frame;Office Bldg;Y;Y
+100291;29-Jan-21;Urban;NY;East;21.400.000;Fire Resist;Apartment;Y;Y
+100340;30-Jan-21;Urban;NY;East;3.754.000;Frame;Office Bldg;Y;Y
+100415;31-Jan-21;Urban;NY;East;9.650.000;Frame;Office Bldg;Y;Y
+100421;31-Jan-21;Urban;NY;East;9.503.000;Frame;Office Bldg;Y;Y
+100304;01-Feb-21;Urban;NJ;East;1.688.300;Frame;Hospitality;N;Y
+100414;02-Feb-21;Urban;WI;Midwest;17.856.705;Masonry;Apartment;Y;Y
+100420;02-Feb-21;Urban;NY;East;7.577.000;Frame;Apartment;Y;Y
+100481;02-Feb-21;Urban;WI;Midwest;1.990.915;Masonry;Office Bldg;N;N
+100352;03-Feb-21;Urban;NJ;East;1.245.000;Frame;Hospitality;Y;Y
+100496;04-Feb-21;Urban;IL;Midwest;1.895.000;Masonry;Office Bldg;N;N
+100309;05-Feb-21;Urban;WI;Midwest;5.000.368;Masonry;Manufacturing;N;N
+100413;05-Feb-21;Urban;NY;East;8.397.700;Frame;Apartment;Y;Y
+100498;06-Feb-21;Urban;NJ;East;36.356.000;Fire Resist;Apartment;Y;Y
