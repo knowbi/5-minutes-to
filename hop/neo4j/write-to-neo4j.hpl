@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pipeline>
   <info>
-    <name>hop\write-to-neo4j</name>
+    <name>write-to-neo4j</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
     <description/>
     <extended_description/>
@@ -22,6 +22,11 @@
   <notepads>
   </notepads>
   <order>
+    <hop>
+      <from>get-data</from>
+      <to>policy output</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>get-data</name>
@@ -49,10 +54,10 @@
     <encoding/>
     <fields>
       <field>
-        <name>policy</name>
+        <name>ï»¿policy</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -60,32 +65,10 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>expiry</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>9</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>location</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>5</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
         <name>state</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>2</length>
@@ -96,7 +79,7 @@
         <name>region</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>9</length>
@@ -104,21 +87,10 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>insured-value</name>
-        <type>Number</type>
-        <format>#,###,###.#</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
         <name>construction</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>11</length>
@@ -129,32 +101,10 @@
         <name>business-type</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>13</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>earthquake</name>
-        <type>Boolean</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>flood</name>
-        <type>Boolean</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -162,6 +112,70 @@
     <attributes/>
     <GUI>
       <xloc>112</xloc>
+      <yloc>96</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>policy output</name>
+    <type>Neo4JOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>neo4j-connection</connection>
+    <batch_size>1000</batch_size>
+    <key/>
+    <create_indexes>Y</create_indexes>
+    <use_create>N</use_create>
+    <only_create_relationships>N</only_create_relationships>
+    <returning_graph>N</returning_graph>
+    <return_graph_field>graph</return_graph_field>
+    <from>
+      <read_only_from_node>Y</read_only_from_node>
+      <labels>
+        <label/>
+        <value>policy</value>
+      </labels>
+      <properties>
+        <property>
+          <name>policy</name>
+          <value>ï»¿policy</value>
+          <type>Integer</type>
+          <primary>N</primary>
+        </property>
+      </properties>
+    </from>
+    <to>
+      <read_only_to_node>Y</read_only_to_node>
+      <labels>
+        <label>state</label>
+        <value>state</value>
+      </labels>
+      <properties>
+        <property>
+          <name>state</name>
+          <value>state</value>
+          <type>String</type>
+          <primary>N</primary>
+        </property>
+      </properties>
+    </to>
+    <relationship/>
+    <relationship_value>IN</relationship_value>
+    <relprops>
+      <relprop>
+        <name>region</name>
+        <value>region</value>
+        <type>String</type>
+      </relprop>
+    </relprops>
+    <attributes/>
+    <GUI>
+      <xloc>416</xloc>
       <yloc>96</yloc>
     </GUI>
   </transform>
