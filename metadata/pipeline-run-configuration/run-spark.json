@@ -1,0 +1,26 @@
+{
+  "engineRunConfiguration": {
+    "BeamSparkPipelineEngine": {
+      "sparkMinReadTimeMillis": "",
+      "sparkMaster": "spark://192.168.1.39:7077",
+      "sparkEnableSparkMetricSinks": false,
+      "streamingHopTransformsBufferSize": "",
+      "sparkCheckpointDir": "",
+      "sparkMaxRecordsPerBatch": "",
+      "userAgent": "Hop",
+      "sparkBatchIntervalMillis": "",
+      "pluginsToStage": "",
+      "tempLocation": "/tmp",
+      "sparkCheckpointDurationMillis": "",
+      "fatJar": "${PROJECT_HOME}\\files\\hop-fat.jar",
+      "sparkBundleSize": "",
+      "sparkReadTimePercentage": "",
+      "streamingHopTransformsFlushInterval": "",
+      "transformPluginClasses": "",
+      "xpPluginClasses": ""
+    }
+  },
+  "configurationVariables": [],
+  "name": "run-spark",
+  "description": "Apache Spark Run Configuration"
+}

@@ -1,0 +1,101 @@
+{
+  "variableValues": [],
+  "database_replacements": [],
+  "autoOpening": true,
+  "basePath": "",
+  "golden_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "avg_age",
+          "data_set_field": "avg_age"
+        },
+        {
+          "transform_field": "state",
+          "data_set_field": "state"
+        }
+      ],
+      "field_order": [
+        "state",
+        "avg_age"
+      ],
+      "transform_name": "sort by state",
+      "data_set_name": "output-customers"
+    }
+  ],
+  "input_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "birthdate",
+          "data_set_field": "birthdate"
+        },
+        {
+          "transform_field": "city",
+          "data_set_field": "city"
+        },
+        {
+          "transform_field": "firstname",
+          "data_set_field": "firstname"
+        },
+        {
+          "transform_field": "housenr",
+          "data_set_field": "housenr"
+        },
+        {
+          "transform_field": "id",
+          "data_set_field": "id"
+        },
+        {
+          "transform_field": "name",
+          "data_set_field": "name"
+        },
+        {
+          "transform_field": "state",
+          "data_set_field": "state"
+        },
+        {
+          "transform_field": "stateCode",
+          "data_set_field": "stateCode"
+        },
+        {
+          "transform_field": "street",
+          "data_set_field": "street"
+        },
+        {
+          "transform_field": "zip",
+          "data_set_field": "zip"
+        }
+      ],
+      "field_order": [
+        "id",
+        "name",
+        "firstname",
+        "zip",
+        "city",
+        "birthdate",
+        "street",
+        "housenr",
+        "stateCode",
+        "state"
+      ],
+      "transform_name": "read customers",
+      "data_set_name": "input-customers"
+    }
+  ],
+  "name": "ave-age-by-state UNIT",
+  "description": "",
+  "trans_test_tweaks": [
+    {
+      "transformName": "filter NY",
+      "tweak": "BYPASS_TRANSFORM"
+    },
+    {
+      "transformName": "write ave-age-by-state",
+      "tweak": "REMOVE_TRANSFORM"
+    }
+  ],
+  "persist_filename": "",
+  "pipeline_filename": "./hop/unit-testing/ave-age-by-state.hpl",
+  "test_type": "UNIT_TEST"
+}

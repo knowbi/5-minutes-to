@@ -60,11 +60,11 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>relationships-output.hpl</name>
+      <name>relationship-output.hpl</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
-      <filename>${PROJECT_HOME}\hop\neo4j\relationships-output.hpl</filename>
+      <filename>${PROJECT_HOME}\hop\neo4j\relationship-output.hpl</filename>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
@@ -109,13 +109,13 @@
     </hop>
     <hop>
       <from>nodes-output.hpl</from>
-      <to>relationships-output.hpl</to>
+      <to>relationship-output.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>relationships-output.hpl</from>
+      <from>relationship-output.hpl</from>
       <to>success</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
