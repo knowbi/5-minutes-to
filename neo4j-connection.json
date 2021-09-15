@@ -1,0 +1,27 @@
+{
+  "variables" : [ {
+    "name" : "NEO4J_SERVER",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_DATABASE",
+    "value" : "neo4j",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_BOLT_PORT",
+    "value" : "7687",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_BROWSER_PORT",
+    "value" : "7474",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_USERNAME",
+    "value" : "neo4j",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PASSWORD",
+    "value" : "pass3003key",
+    "description" : ""
+  } ]
+}
