@@ -39,7 +39,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${FILES_DIR}/insurances.csv</filename>
+    <filename>${PROJECT_HOME}/files/insurances.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
