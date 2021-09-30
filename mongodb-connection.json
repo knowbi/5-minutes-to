@@ -1,0 +1,15 @@
+{
+  "variables" : [ {
+    "name" : "MONGODB_SERVER",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "MONGODB_DATABASE",
+    "value" : "how-to",
+    "description" : ""
+  }, {
+    "name" : "MONGODB_PORT",
+    "value" : "27017",
+    "description" : ""
+  }]
+}
