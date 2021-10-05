@@ -1,6 +1,6 @@
 {
-  "base_filename": "input-customers.csv",
-  "name": "input-customers",
+  "base_filename": "data-set-customers.csv",
+  "name": "data-set-customers",
   "description": "",
   "dataset_fields": [
     {

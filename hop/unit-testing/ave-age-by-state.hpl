@@ -23,38 +23,175 @@
   </notepads>
   <order>
     <hop>
-      <from>avg age by state</from>
-      <to>sort by state</to>
+      <from>avg-age-by-state</from>
+      <to>sort-by-state</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>calc age</from>
-      <to>avg age by state</to>
+      <from>calc-age</from>
+      <to>avg-age-by-state</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>get today</from>
-      <to>calc age</to>
+      <from>get-today</from>
+      <to>calc-age</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>read customers</from>
-      <to>filter NY</to>
+      <from>read-customers</from>
+      <to>filter-NY</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>filter NY</from>
-      <to>get today</to>
+      <from>filter-NY</from>
+      <to>get-today</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>sort by state</from>
-      <to>write ave-age-by-state</to>
+      <from>sort-by-state</from>
+      <to>write-ave-age-by-state</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>read customers</name>
+    <name>avg-age-by-state</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>state</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <aggregate>avg_age</aggregate>
+        <subject>age</subject>
+        <type>AVERAGE</type>
+        <valuefield/>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>calc-age</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>Y</failIfNoFile>
+    <calculation>
+      <calc_type>CONSTANT</calc_type>
+      <field_a>365</field_a>
+      <field_name>days_in_year</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>Integer</value_type>
+    </calculation>
+    <calculation>
+      <calc_type>DATE_DIFF</calc_type>
+      <field_a>today</field_a>
+      <field_b>birthdate</field_b>
+      <field_name>total_days</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>Integer</value_type>
+    </calculation>
+    <calculation>
+      <calc_type>DIVIDE</calc_type>
+      <field_a>total_days</field_a>
+      <field_b>days_in_year</field_b>
+      <field_name>age</field_name>
+      <remove>N</remove>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <value_type>Integer</value_type>
+    </calculation>
+    <attributes/>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>filter-NY</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>get-today</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>stateCode</leftvalue>
+        <function>&lt;></function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>NY</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask/>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>get-today</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>today</name>
+        <type>system date (variable)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>64</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>read-customers</name>
     <type>CSVInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -191,113 +328,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>96</yloc>
+      <xloc>160</xloc>
+      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>get today</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>today</name>
-        <type>system date (variable)</type>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>96</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>avg age by state</name>
-    <type>MemoryGroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>state</name>
-      </field>
-    </group>
-    <fields>
-      <field>
-        <aggregate>avg_age</aggregate>
-        <subject>age</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>96</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>calc age</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <calc_type>CONSTANT</calc_type>
-      <field_a>365</field_a>
-      <field_name>days_in_year</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>Integer</value_type>
-    </calculation>
-    <calculation>
-      <calc_type>DATE_DIFF</calc_type>
-      <field_a>today</field_a>
-      <field_b>birthdate</field_b>
-      <field_name>total_days</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>Integer</value_type>
-    </calculation>
-    <calculation>
-      <calc_type>DIVIDE</calc_type>
-      <field_a>total_days</field_a>
-      <field_b>days_in_year</field_b>
-      <field_name>age</field_name>
-      <remove>N</remove>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <value_type>Integer</value_type>
-    </calculation>
-    <attributes/>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>96</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>sort by state</name>
+    <name>sort-by-state</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -326,48 +362,12 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>96</yloc>
+      <xloc>816</xloc>
+      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>filter NY</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>get today</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>stateCode</leftvalue>
-        <function>&lt;></function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>String</type>
-          <text>NY</text>
-          <length>-1</length>
-          <precision>-1</precision>
-          <isnull>N</isnull>
-          <mask/>
-        </value>
-      </condition>
-    </compare>
-    <attributes/>
-    <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>write ave-age-by-state</name>
+    <name>write-ave-age-by-state</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -391,7 +391,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${PROJECT_HOME}\output\write ave-age-by-state</name>
+      <name>${PROJECT_HOME}\output\write-ave-age-by-state</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>csv</extention>
@@ -435,8 +435,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>176</yloc>
+      <xloc>976</xloc>
+      <yloc>64</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
