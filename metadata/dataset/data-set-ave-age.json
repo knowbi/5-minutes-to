@@ -16,7 +16,7 @@
       "field_length": -1,
       "field_type": 5,
       "field_precision": 0,
-      "field_format": "####0;-####0",
+      "field_format": "#",
       "field_name": "avg_age"
     }
   ],
