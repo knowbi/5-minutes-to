@@ -24,7 +24,7 @@
   <order>
     <hop>
       <from>log</from>
-      <to>pipelines logging</to>
+      <to>workflows-logging</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -47,7 +47,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>pipelines logging</name>
+    <name>workflows-logging</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

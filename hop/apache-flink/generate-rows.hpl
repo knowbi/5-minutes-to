@@ -23,13 +23,13 @@
   </notepads>
   <order>
     <hop>
-      <from>generate value</from>
-      <to>write value</to>
+      <from>generate-value</from>
+      <to>write-value</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>generate value</name>
+    <name>generate-value</name>
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
@@ -65,7 +65,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>write value</name>
+    <name>write-value</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>

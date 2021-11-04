@@ -24,7 +24,7 @@
   <order>
     <hop>
       <from>log</from>
-      <to>pipelines logging</to>
+      <to>pipelines-logging</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -47,7 +47,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>pipelines logging</name>
+    <name>pipelines-logging</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -78,7 +78,7 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>384</xloc>
       <yloc>160</yloc>
     </GUI>
   </transform>
