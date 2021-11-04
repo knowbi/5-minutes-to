@@ -58,7 +58,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000</commit>
-    <connection>logging</connection>
+    <connection>logging-connection</connection>
     <fields>
 </fields>
     <return_field/>

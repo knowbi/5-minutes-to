@@ -1,0 +1,23 @@
+{
+  "variables" : [ {
+    "name" : "LOGGING_SERVER",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "LOGGING_DATABASE",
+    "value" : "postgres",
+    "description" : ""
+  }, {
+    "name" : "LOGGING_PORT",
+    "value" : "5432",
+    "description" : ""
+  }, {
+    "name" : "LOGGING_USERNAME",
+    "value" : "postgres",
+    "description" : ""
+  }, {
+    "name" : "LOGGING_PASSWORD",
+    "value" : "pass3003key",
+    "description" : ""
+  } ]
+}

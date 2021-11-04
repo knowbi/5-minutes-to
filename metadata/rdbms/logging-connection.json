@@ -1,12 +1,12 @@
 {
   "rdbms": {
     "POSTGRESQL": {
-      "databaseName": "postgres",
+      "databaseName": "${LOGGING_DATABASE}",
       "pluginId": "POSTGRESQL",
       "accessType": 0,
-      "hostname": "localhost",
-      "password": "Encrypted 2be98afc86ad79397b84afe208d99aac3",
-      "port": "5432",
+      "hostname": "${LOGGING_SERVER}",
+      "password": "${LOGGING_PASSWORD}",
+      "port": "${LOGGING_PORT}",
       "pluginName": "PostgreSQL",
       "attributes": {
         "SUPPORTS_TIMESTAMP_DATA_TYPE": "Y",
@@ -19,8 +19,8 @@
         "PREFERRED_SCHEMA_NAME": ""
       },
       "manualUrl": "",
-      "username": "postgres"
+      "username": "${LOGGING_USERNAME}"
     }
   },
-  "name": "logging"
+  "name": "logging-connection"
 }
