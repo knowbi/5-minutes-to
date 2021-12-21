@@ -1,0 +1,16 @@
+{
+  "base_filename": "data-set-number.csv",
+  "name": "data-set-number",
+  "description": "",
+  "dataset_fields": [
+    {
+      "field_comment": "",
+      "field_length": -1,
+      "field_type": 1,
+      "field_precision": -1,
+      "field_format": "#",
+      "field_name": "number"
+    }
+  ],
+  "folder_name": ""
+}

@@ -1,0 +1,66 @@
+{
+  "variableValues": [],
+  "database_replacements": [],
+  "autoOpening": true,
+  "basePath": "",
+  "golden_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "number",
+          "data_set_field": "number"
+        },
+        {
+          "transform_field": "sequence",
+          "data_set_field": "sequence"
+        },
+        {
+          "transform_field": "std",
+          "data_set_field": "std"
+        },
+        {
+          "transform_field": "sum",
+          "data_set_field": "sum"
+        }
+      ],
+      "field_order": [
+        "number",
+        "sequence",
+        "sum",
+        "std"
+      ],
+      "transform_name": "write-all-to-csv",
+      "data_set_name": "data-set-calc-all"
+    }
+  ],
+  "input_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "number",
+          "data_set_field": "number"
+        }
+      ],
+      "field_order": [
+        "number"
+      ],
+      "transform_name": "generate-number",
+      "data_set_name": "data-set-number-remove"
+    }
+  ],
+  "name": "generate-rows-remove-unit",
+  "description": "",
+  "trans_test_tweaks": [
+    {
+      "transformName": "Null if",
+      "tweak": "REMOVE_TRANSFORM"
+    },
+    {
+      "transformName": "write-12-to-csv",
+      "tweak": "REMOVE_TRANSFORM"
+    }
+  ],
+  "persist_filename": "",
+  "pipeline_filename": "./hop/unit-testing/generate-rows-remove.hpl",
+  "test_type": "UNIT_TEST"
+}

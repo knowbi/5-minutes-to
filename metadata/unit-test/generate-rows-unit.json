@@ -1,0 +1,57 @@
+{
+  "variableValues": [],
+  "database_replacements": [],
+  "autoOpening": true,
+  "basePath": "",
+  "golden_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "number",
+          "data_set_field": "number"
+        },
+        {
+          "transform_field": "sequence",
+          "data_set_field": "sequence"
+        },
+        {
+          "transform_field": "std",
+          "data_set_field": "std"
+        },
+        {
+          "transform_field": "sum",
+          "data_set_field": "sum"
+        }
+      ],
+      "field_order": [
+        "number",
+        "sequence",
+        "sum",
+        "std"
+      ],
+      "transform_name": "write-to-csv",
+      "data_set_name": "data-set-calc"
+    }
+  ],
+  "input_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "number",
+          "data_set_field": "number"
+        }
+      ],
+      "field_order": [
+        "number"
+      ],
+      "transform_name": "generate-number",
+      "data_set_name": "data-set-number"
+    }
+  ],
+  "name": "generate-rows-unit",
+  "description": "",
+  "trans_test_tweaks": [],
+  "persist_filename": "",
+  "pipeline_filename": "./hop/unit-testing/generate-rows.hpl",
+  "test_type": "UNIT_TEST"
+}
