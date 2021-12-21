@@ -1,5 +1,5 @@
 # 5-minutes-to
-This repository contains Apache Hop (Incubating) samples that go with the pages on the [know.bi website](https://www.know.bi)
+This repository contains Apache Hop (Incubating) samples that go with the pages on the [know.bi website](https://www.know-bi.be/)
 
 Check the [getting started with Apache Hop (Incubating)](https://www.know-bi.be/5-minutes-to-get-started-with-apache-hop) to set up your environment.
 
