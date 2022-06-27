@@ -1,0 +1,11 @@
+{
+  "dataProbeLocations": [
+    {
+      "sourcePipelineFilename": "${PROJECT_HOME}/hop/pipeline-probe/generate-rows.hpl",
+      "sourceTransformName": "write-to-csv"
+    }
+  ],
+  "name": "pipeline-probe-metadata",
+  "pipelineFilename": "${PROJECT_HOME}/hop/pipeline-probe/pipeline-probe.hpl",
+  "enabled": true
+}
