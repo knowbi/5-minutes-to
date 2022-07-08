@@ -1,0 +1,23 @@
+{
+  "variables" : [ {
+    "name" : "VERTICA_SERVER",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "VERTICA_DATABASE",
+    "value" : "VMart",
+    "description" : ""
+  }, {
+    "name" : "VERTICA_PORT",
+    "value" : "5433",
+    "description" : ""
+  }, {
+    "name" : "VERTICA_USERNAME",
+    "value" : "dbadmin",
+    "description" : ""
+  }, {
+    "name" : "VERTICA_PASSWORD",
+    "value" : "pass3003key",
+    "description" : ""
+  } ]
+}

@@ -1,0 +1,183 @@
+{
+  "relationships": [
+    {
+      "nodeSource": "film",
+      "name": "BELONGS_TO",
+      "description": "",
+      "nodeTarget": "category",
+      "label": "BELONGS_TO",
+      "properties": []
+    },
+    {
+      "nodeSource": "actor",
+      "name": "ACTS_IN",
+      "description": "",
+      "nodeTarget": "film",
+      "label": "ACTS_IN",
+      "properties": []
+    },
+    {
+      "nodeSource": "film",
+      "name": "IN",
+      "description": "",
+      "nodeTarget": "laguage",
+      "label": "IN",
+      "properties": []
+    }
+  ],
+  "nodes": [
+    {
+      "presentation": {
+        "x": 507,
+        "y": 127
+      },
+      "name": "category",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "category_id",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "name",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Category"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 337,
+        "y": 227
+      },
+      "name": "film",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "film_id",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "title",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "description",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "rental_rate",
+          "description": "",
+          "type": "Float",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Film"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 642,
+        "y": 228
+      },
+      "name": "laguage",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "language_id",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "name",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Language"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 526,
+        "y": 359
+      },
+      "name": "actor",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "actor_id",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "first_name",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "last_name",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Actor"
+      ]
+    }
+  ],
+  "name": "dvdrental",
+  "description": ""
+}
