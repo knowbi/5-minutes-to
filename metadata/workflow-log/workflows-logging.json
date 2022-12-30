@@ -1,9 +1,12 @@
 {
   "loggingParentsOnly": true,
   "name": "workflows-logging",
+  "workflowToLog": [
+    "${PROJECT_HOME}/hop/logging/workflows-logging.hpl"
+  ],
   "intervalInSeconds": "30",
-  "pipelineFilename": "${PROJECT_HOME}/hop/logging/workflows-logging.hpl",
   "executingPeriodically": false,
+  "pipelineFilename": "${PROJECT_HOME}/hop/logging/workflows-logging.hpl",
   "executingAtEnd": true,
   "enabled": true,
   "executingAtStart": true
