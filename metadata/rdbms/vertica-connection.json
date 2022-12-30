@@ -4,10 +4,10 @@
       "databaseName": "${VERTICA_DATABASE}",
       "pluginId": "VERTICA5",
       "accessType": 0,
-      "hostname": "${VERTICA_SERVER}",
+      "hostname": "${VERTICA_HOST}",
       "password": "Encrypted ",
-      "port": "${VERTICA_PORT}",
       "pluginName": "Vertica 5",
+      "port": "${VERTICA_PORT}",
       "attributes": {
         "SUPPORTS_TIMESTAMP_DATA_TYPE": "Y",
         "QUOTE_ALL_FIELDS": "N",
@@ -19,7 +19,7 @@
         "PREFERRED_SCHEMA_NAME": ""
       },
       "manualUrl": "",
-      "username": "${VERTICA_USERNAME}"
+      "username": "${VERTICA_USER}"
     }
   },
   "name": "vertica-connection"
