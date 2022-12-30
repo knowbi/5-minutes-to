@@ -1,9 +1,14 @@
 {
+  "pipelinesToLog": [
+    {
+      "pipelineToLogFilename": "${PROJECT_HOME}/hop/logging/pipelines-logging.hpl"
+    }
+  ],
   "loggingParentsOnly": true,
   "name": "pipelines-logging",
   "intervalInSeconds": "30",
-  "pipelineFilename": "${PROJECT_HOME}/hop/logging/pipelines-logging.hpl",
   "executingPeriodically": false,
+  "pipelineFilename": "${PROJECT_HOME}/hop/logging/pipelines-logging.hpl",
   "executingAtEnd": true,
   "enabled": true,
   "executingAtStart": true
