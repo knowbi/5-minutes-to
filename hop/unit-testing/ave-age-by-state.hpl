@@ -16,8 +16,6 @@
     <created_date>2021/06/30 09:30:42.731</created_date>
     <modified_user>-</modified_user>
     <modified_date>2021/06/30 09:30:42.731</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
-    <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
@@ -64,20 +62,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <fields>
+      <field>
+        <aggregate>avg_age</aggregate>
+        <subject>age</subject>
+        <type>AVERAGE</type>
+      </field>
+    </fields>
     <give_back_row>N</give_back_row>
     <group>
       <field>
         <name>state</name>
       </field>
     </group>
-    <fields>
-      <field>
-        <aggregate>avg_age</aggregate>
-        <subject>age</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-    </fields>
     <attributes/>
     <GUI>
       <xloc>688</xloc>
@@ -95,7 +92,6 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
     <calculation>
       <calc_type>CONSTANT</calc_type>
       <field_a>365</field_a>
@@ -125,6 +121,7 @@
       <value_precision>-1</value_precision>
       <value_type>Integer</value_type>
     </calculation>
+    <failIfNoFile>Y</failIfNoFile>
     <attributes/>
     <GUI>
       <xloc>544</xloc>
@@ -142,22 +139,21 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>get-today</send_true_to>
-    <send_false_to/>
     <compare>
       <condition>
-        <negated>N</negated>
-        <leftvalue>stateCode</leftvalue>
+        <conditions>
+</conditions>
         <function>&lt;></function>
-        <rightvalue/>
+        <leftvalue>stateCode</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
         <value>
-          <name>constant</name>
-          <type>String</type>
-          <text>NY</text>
-          <length>-1</length>
-          <precision>-1</precision>
           <isnull>N</isnull>
-          <mask/>
+          <length>-1</length>
+          <name>constant</name>
+          <precision>-1</precision>
+          <text>NY</text>
+          <type>String</type>
         </value>
       </condition>
     </compare>
