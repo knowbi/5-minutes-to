@@ -81,6 +81,40 @@
     </GUI>
   </transform>
   <transform>
+    <name>copy of input rows</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>396</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>execution results</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>generate rows</name>
     <type>RowGenerator</type>
     <description/>
@@ -146,6 +180,12 @@
     <execution_log_text_field>ExecutionLogText</execution_log_text_field>
     <execution_log_channelid_field>ExecutionLogChannelId</execution_log_channelid_field>
     <result_rows_target_transform>result rows after execution</result_rows_target_transform>
+    <result_rows_field>
+      <name>dummy_value</name>
+      <type>String</type>
+      <length>-1</length>
+      <precision>-1</precision>
+    </result_rows_field>
     <result_files_target_transform>result file names after execution</result_files_target_transform>
     <result_files_file_name_field>FileName</result_files_file_name_field>
     <executors_output_transform>copy of input rows</executors_output_transform>
@@ -156,7 +196,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>execution results</name>
+    <name>main output</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -169,24 +209,7 @@
     <attributes/>
     <GUI>
       <xloc>688</xloc>
-      <yloc>144</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>result rows after execution</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>228</yloc>
+      <yloc>480</yloc>
     </GUI>
   </transform>
   <transform>
@@ -207,7 +230,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>copy of input rows</name>
+    <name>result rows after execution</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -220,24 +243,7 @@
     <attributes/>
     <GUI>
       <xloc>688</xloc>
-      <yloc>396</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>main output</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>480</yloc>
+      <yloc>228</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
