@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workflow>
-  <name>repeat-pipeline</name>
+  <name>repeat-action</name>
   <name_sync_with_filename>Y</name_sync_with_filename>
   <description/>
   <extended_description/>
@@ -35,7 +35,7 @@
       <description/>
       <type>Repeat</type>
       <attributes/>
-      <filename>${PROJECT_HOME}/hop/loops/check-set-counter-value.hpl</filename>
+      <filename>${PROJECT_HOME}/hop/loops/child-check-set-counter-value.hpl</filename>
       <run_configuration>local</run_configuration>
       <variable_name>END_LOOP</variable_name>
       <variable_value/>
@@ -82,7 +82,7 @@
       <attributes/>
       <filename>${PROJECT_HOME}/hop/loops/end-repeat-pipeline.hwf</filename>
       <run_configuration>local</run_configuration>
-      <variable_name/>
+      <variable_name>END_LOOP</variable_name>
       <variable_value/>
       <delay/>
       <keep_values>N</keep_values>
