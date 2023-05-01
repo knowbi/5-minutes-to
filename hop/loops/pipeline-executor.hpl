@@ -150,7 +150,7 @@
       <schema_name/>
     </partitioning>
     <run_configuration>local</run_configuration>
-    <filename>${PROJECT_HOME}/hop/loops/loops-log-counter.hpl</filename>
+    <filename>${PROJECT_HOME}/hop/loops/child-loops-log-counter.hpl</filename>
     <filenameInField>N</filenameInField>
     <filenameField/>
     <group_size>1</group_size>
