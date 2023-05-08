@@ -1,0 +1,7 @@
+{
+  "variables" : [ {
+    "name" : "ENV_VARIABLE",
+    "value" : "variable value",
+    "description" : ""
+  } ]
+}
